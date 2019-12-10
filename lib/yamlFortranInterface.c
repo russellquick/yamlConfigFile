@@ -267,6 +267,7 @@ yamlFortranInterfaceInteger
 YAMLFORTRANINTERFACE_FORTRAN_API(yamlconfigfile_getnodecollectionsize)(
     yamlFortranInterfaceInteger *yamlUnit,
     const char                  *keyPath,
+    yamlFortranInterfaceInteger *value,
     yamlFortranInterfaceInteger *ierr,
     yamlFortranInterfaceInteger keyPathLen
 )
@@ -308,6 +309,7 @@ YAMLFORTRANINTERFACE_FORTRAN_API(yamlconfigfile_getnodecollectionsize)(
     } else {
         *ierr = yamlFortranInterfaceError_invalidUnit;
     }
+    *value = count;
     return (yamlFortranInterfaceInteger)count;
 }
 
